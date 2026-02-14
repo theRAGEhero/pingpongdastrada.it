@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ping Pong da Strada — Bologna</title>
+  <meta name="description" content="Comunità di ping pong a Bologna, Parco La Montagnola. Torneo domenicale e partite libere." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">Ping Pong da Strada</div>
+      <div class="nav-links">
+        <a href="#chi-siamo">Chi siamo</a>
+        <a href="#torneo">Torneo</a>
+        <a href="#mappa">Mappa</a>
+        <a href="#contatti">Contatti</a>
+      </div>
+      <a class="nav-cta" href="#contatti">Unisciti</a>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Bologna · Parco La Montagnola</p>
+        <h1>Ping pong libero, amicizia, spazio pubblico vivo.</h1>
+        <p class="lead">
+          Una comunità che si incontra all’aperto per giocare, imparare e stare insieme.
+          Nessuna iscrizione, solo energia e passione.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#torneo">Torneo domenicale</a>
+          <a class="btn ghost" href="#mappa">Guarda la mappa</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div>
+          <span class="label">Dove</span>
+          <h2>La Montagnola</h2>
+          <p>Tavoli da ping pong nel parco, due punti di ritrovo.</p>
+        </div>
+        <div>
+          <span class="label">Quando</span>
+          <p>Partite libere durante la settimana, torneo la domenica.</p>
+        </div>
+        <a class="btn small" href="#contatti">Entra nel gruppo</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="chi-siamo" class="section intro">
+      <div class="section-title">
+        <p class="eyebrow">Chi siamo</p>
+        <h2>Una comunità informale che fa vivere il parco.</h2>
+      </div>
+      <p class="body">
+        Ping Pong da Strada è un gruppo aperto: studenti, residenti, curiosi,
+        giocatori esperti e chi vuole solo scambiare due colpi. Ci trovi al parco
+        quando il meteo è buono e l’aria è leggera.
+      </p>
+    </section>
+
+    <section id="torneo" class="section tournament">
+      <div class="section-title">
+        <p class="eyebrow">Torneo</p>
+        <h2>Ogni domenica pomeriggio si gioca per davvero.</h2>
+      </div>
+      <div class="tournament-card">
+        <div>
+          <h3>Torneo domenicale</h3>
+          <p>Iscrizione gratuita sul momento, tabellone veloce e tanta gente.</p>
+        </div>
+        <div class="tournament-info">
+          <div>
+            <span class="label">Quando</span>
+            <p>Domenica, dalle 16:30 alle 19:30</p>
+          </div>
+          <div>
+            <span class="label">Formato</span>
+            <p>Partite brevi, livelli misti, rotazioni rapide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mappa" class="section map">
+      <div class="section-title">
+        <p class="eyebrow">Mappa</p>
+        <h2>Due tavoli, un’unica comunità.</h2>
+      </div>
+      <div class="map-card">
+        <div id="map" aria-label="Mappa con due tavoli di ping pong"></div>
+        <div class="map-meta">
+          <p>Pin 1: Parco La Montagnola · Pin 2: Tavolo in cemento.</p>
+          <div class="map-links">
+            <a href="https://www.openstreetmap.org/?mlat=44.502685&amp;mlon=11.346761#map=19/44.502685/11.346761" target="_blank" rel="noreferrer">Apri La Montagnola</a>
+            <a href="https://www.openstreetmap.org/#map=19/44.487941/11.354982" target="_blank" rel="noreferrer">Apri Tavolo in cemento</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contatti" class="section contact">
+      <div class="section-title">
+        <p class="eyebrow">Contatti</p>
+        <h2>Entra nel gruppo WhatsApp e vieni a giocare.</h2>
+      </div>
+      <div class="contact-card">
+        <p>Scrivici o unisciti al gruppo per sapere chi c’è oggi.</p>
+        <div class="contact-links">
+          <a class="btn primary" href="https://chat.whatsapp.com/INSERISCI-CODICE" target="_blank" rel="noreferrer">Gruppo WhatsApp</a>
+          <a class="btn ghost" href="mailto:ciao@pingpongdastrada.it">ciao@pingpongdastrada.it</a>
+        </div>
+        <p class="note">Sostituisci il link WhatsApp con quello reale del gruppo.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Ping Pong da Strada · Bologna · Parco La Montagnola</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    const map = L.map("map", { scrollWheelZoom: false });
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "&copy; OpenStreetMap contributors"
+    }).addTo(map);
+
+    const montagnola = L.marker([44.502685, 11.346761]).addTo(map);
+    montagnola.bindPopup("Parco La Montagnola");
+
+    const cemento = L.marker([44.487941, 11.354982]).addTo(map);
+    cemento.bindPopup("Tavolo in cemento");
+
+    const group = L.featureGroup([montagnola, cemento]);
+    map.fitBounds(group.getBounds().pad(0.2));
+  </script>
+</body>
+</html>
