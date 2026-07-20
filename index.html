@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ping Pong da Strada — Bologna</title>
-  <meta name="description" content="Comunità di ping pong a Bologna, Parco La Montagnola. Torneo domenicale e partite libere." />
+  <meta name="description" content="Comunità di ping pong a Bologna: partite libere, torneo domenicale e guida ai tavoli pubblici e privati del territorio." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -14,12 +15,15 @@
 <body>
   <div class="grain"></div>
 
-  <header class="hero">
+  <header id="top" class="hero">
     <nav class="nav">
-      <div class="brand">Ping Pong da Strada</div>
+      <a class="brand" href="#top" aria-label="Ping Pong da Strada — torna all’inizio">
+        <img src="assets/logo.svg" alt="Ping Pong da Strada" width="420" height="72" />
+      </a>
       <div class="nav-links">
         <a href="#chi-siamo">Chi siamo</a>
         <a href="#torneo">Torneo</a>
+        <a href="#dove-giocare">Dove giocare</a>
         <a href="#mappa">Mappa</a>
         <a href="#contatti">Contatti</a>
       </div>
@@ -31,19 +35,19 @@
         <p class="eyebrow">Bologna · Parco La Montagnola</p>
         <h1>Ping pong libero, amicizia, spazio pubblico vivo.</h1>
         <p class="lead">
-          Una comunità che si incontra all’aperto per giocare, imparare e stare insieme.
+          Una comunità che si incontra all’aperto per giocare, imparare e stare insieme.
           Nessuna iscrizione, solo energia e passione.
         </p>
         <div class="hero-actions">
           <a class="btn primary" href="#torneo">Torneo domenicale</a>
-          <a class="btn ghost" href="#mappa">Guarda la mappa</a>
+          <a class="btn ghost" href="#dove-giocare">Trova un tavolo</a>
         </div>
       </div>
       <div class="hero-card">
         <div>
           <span class="label">Dove</span>
           <h2>La Montagnola</h2>
-          <p>Tavoli da ping pong nel parco, due punti di ritrovo.</p>
+          <p>Tre tavoli da ping pong nel parco, due dei quali curati dal gruppo.</p>
         </div>
         <div>
           <span class="label">Quando</span>
@@ -58,12 +62,12 @@
     <section id="chi-siamo" class="section intro">
       <div class="section-title">
         <p class="eyebrow">Chi siamo</p>
-        <h2>Una comunità informale che fa vivere il parco.</h2>
+        <h2>Una comunità informale che fa vivere il parco.</h2>
       </div>
       <p class="body">
-        Ping Pong da Strada è un gruppo aperto: studenti, residenti, curiosi,
+        Ping Pong da Strada è un gruppo aperto: studenti, residenti, curiosi,
         giocatori esperti e chi vuole solo scambiare due colpi. Ci trovi al parco
-        quando il meteo è buono e l’aria è leggera.
+        quando il meteo è buono e l’aria è leggera.
       </p>
     </section>
 
@@ -90,18 +94,138 @@
       </div>
     </section>
 
+    <section id="dove-giocare" class="section places">
+      <div class="section-title section-title-row">
+        <div>
+          <p class="eyebrow">Dove giocare</p>
+          <h2>La guida ai tavoli di Bologna e dintorni.</h2>
+          <p class="body">Tavoli pubblici, spazi privati accessibili, circoli e società sportive raccolti in un unico posto.</p>
+        </div>
+        <div class="directory-stats" aria-label="Riepilogo dei tavoli censiti">
+          <div><strong>16</strong><span>tavoli pubblici</span></div>
+          <div><strong>12–13</strong><span>in locali privati</span></div>
+          <div><strong>6</strong><span>nei comuni vicini</span></div>
+        </div>
+      </div>
+
+      <nav class="category-nav" aria-label="Categorie della guida">
+        <a href="#tavoli-pubblici">Suolo pubblico</a>
+        <a href="#locali-privati">Locali privati</a>
+        <a href="#dintorni">Dintorni</a>
+        <a href="#societa">ASD e club</a>
+      </nav>
+
+      <div id="tavoli-pubblici" class="directory-block">
+        <div class="directory-heading">
+          <div>
+            <span class="label">Comune di Bologna</span>
+            <h3>Tavoli comunali o su suolo pubblico</h3>
+          </div>
+          <span class="count-pill">12 luoghi · 16 tavoli</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Luogo</th><th>Tavoli</th><th>Piano</th><th>Note</th></tr></thead>
+            <tbody>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Parco%20della%20Montagnola%20Bologna" target="_blank" rel="noreferrer">Parco della Montagnola</a></td><td data-label="Tavoli">3</td><td data-label="Piano">Resina</td><td data-label="Note">I due tavoli blu sono di proprietà del gruppo “Ping Pong da Strada”; quello grigio è comunale.</td></tr>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Lunetta%20Gamberini%20Bologna" target="_blank" rel="noreferrer">Lunetta Gamberini</a></td><td data-label="Tavoli">2</td><td data-label="Piano">Cemento</td><td data-label="Note">—</td></tr>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Parco%20del%20Ghisello%20Bologna" target="_blank" rel="noreferrer">Parco del Ghisello</a></td><td data-label="Tavoli">2</td><td data-label="Piano">Cemento</td><td data-label="Note">—</td></tr>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Giardino%20Decorato%20al%20Valore%20Civile%20Bologna" target="_blank" rel="noreferrer">Giardino Decorato al Valore Civile</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Cemento</td><td data-label="Note">—</td></tr>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Giardino%20Parker-Lennon%20Bologna" target="_blank" rel="noreferrer">Giardino Parker-Lennon</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Cemento</td><td data-label="Note">—</td></tr>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Parco%20del%20Velodromo%20Bologna" target="_blank" rel="noreferrer">Parco del Velodromo</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Cemento</td><td data-label="Note">—</td></tr>
+              <tr class="needs-care"><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Giardino%20Lavinia%20Fontana%20Bologna" target="_blank" rel="noreferrer">Giardino Lavinia Fontana</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Cemento</td><td data-label="Note"><span class="status warning">Da sistemare</span> Dove si posizionano i giocatori si è creato un avvallamento; quando piove il terreno resta inzuppato per settimane.</td></tr>
+              <tr class="needs-care"><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Parco%20della%20Zucca%20Bologna" target="_blank" rel="noreferrer">Parco della Zucca</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Cemento</td><td data-label="Note"><span class="status danger">Rete mancante</span> Rete metallica divelta da vandali.</td></tr>
+              <tr class="needs-care"><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Giardino%20Jerzj%20Popieluszko%20Bologna" target="_blank" rel="noreferrer">Giardino Jerzj Popieluszko</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Cemento</td><td data-label="Note"><span class="status danger">Rete mancante</span> Rete metallica divelta da vandali.</td></tr>
+              <tr class="needs-care"><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Parco%20di%20Villa%20Torchi%20Bologna" target="_blank" rel="noreferrer">Parco di Villa Torchi</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Cemento</td><td data-label="Note"><span class="status danger">Rete mancante</span> Rete metallica divelta da vandali.</td></tr>
+              <tr class="needs-care"><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Giardino%20Donatori%20di%20Sangue%20Bologna" target="_blank" rel="noreferrer">Giardino Donatori di Sangue</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Cemento</td><td data-label="Note"><span class="status danger">Rete mancante</span> Rete metallica divelta da vandali.</td></tr>
+              <tr class="needs-care"><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Casa%20di%20quartiere%20Croce%20Coperta%20Bologna" target="_blank" rel="noreferrer">Casa di quartiere Croce Coperta</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Cemento</td><td data-label="Note"><span class="status danger">Rete mancante</span> Rete metallica divelta da vandali.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="locali-privati" class="directory-block">
+        <div class="directory-heading">
+          <div><span class="label">Bologna</span><h3>Tavoli presso locali privati</h3></div>
+          <span class="count-pill">8 luoghi · 12–13 tavoli</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Luogo</th><th>Tavoli</th><th>Piano</th><th>Accesso e note</th></tr></thead>
+            <tbody>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Mezz%27Aria%20Community%20Hub%20Bologna" target="_blank" rel="noreferrer">“Ping Pong da Strada 2” c/o Mezz’Aria Community Hub</a></td><td data-label="Tavoli">3–4</td><td data-label="Piano">Truciolare / alluminio</td><td data-label="Accesso e note"><span class="status free">Gratuito</span> 3 tavoli da competizione e 1 da esterno, attualmente non utilizzabile. Iscrizione al gruppo richiesta.</td></tr>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=DUMBO%20Bologna" target="_blank" rel="noreferrer">DUMBO</a></td><td data-label="Tavoli">2</td><td data-label="Piano">Resina</td><td data-label="Accesso e note"><span class="status free">Gratuito</span> Tavoli da esterno.</td></tr>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Le%20Serre%20dei%20Giardini%20Margherita%20Bologna" target="_blank" rel="noreferrer">Le Serre dei Giardini Margherita</a></td><td data-label="Tavoli">2</td><td data-label="Piano">Resina</td><td data-label="Accesso e note"><span class="status free">Gratuito</span> Tavoli da esterno.</td></tr>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=TEST%20Bologna" target="_blank" rel="noreferrer">TEST</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Resina</td><td data-label="Accesso e note"><span class="status free">Gratuito</span> Tavolo da esterno.</td></tr>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Labas%20Bologna" target="_blank" rel="noreferrer">Làbas</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Resina</td><td data-label="Accesso e note"><span class="status free">Gratuito</span> Tavolo da esterno.</td></tr>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Circolo%20della%20Pace%20Bologna" target="_blank" rel="noreferrer">Circolo della Pace</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Da verificare</td><td data-label="Accesso e note"><span class="status free">Gratuito</span></td></tr>
+              <tr class="needs-care"><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Fondo%20Comini%20Bologna" target="_blank" rel="noreferrer">Fondo Comini</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Da verificare</td><td data-label="Accesso e note"><span class="status free">Gratuito</span> Tavolo da esterno in cattive condizioni.</td></tr>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Bar%20Arno%20Bologna" target="_blank" rel="noreferrer">Bar Arno</a></td><td data-label="Tavoli">1</td><td data-label="Piano">MDF</td><td data-label="Accesso e note"><span class="status paid">A pagamento</span> Tavolo da interno.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="dintorni" class="directory-block">
+        <div class="directory-heading">
+          <div><span class="label">Fuori Bologna</span><h3>Tavoli nelle località limitrofe</h3></div>
+          <span class="count-pill">4 luoghi · 6 tavoli</span>
+        </div>
+        <div class="table-wrap compact-table">
+          <table>
+            <thead><tr><th>Luogo</th><th>Tavoli</th><th>Piano</th><th>Accesso e note</th></tr></thead>
+            <tbody>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Parco%20Falcone%20e%20Borsellino%20Villanova%20di%20Castenaso" target="_blank" rel="noreferrer">Villanova di Castenaso · Parco Falcone e Borsellino</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Resina</td><td data-label="Accesso e note"><span class="status free">Gratuito</span> Tavolo da esterno.</td></tr>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Via%20Cavour%20Casalecchio%20di%20Reno" target="_blank" rel="noreferrer">Casalecchio di Reno · Via Cavour</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Cemento</td><td data-label="Accesso e note"><span class="status free">Gratuito</span> Tavolo da esterno.</td></tr>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Parco%20Morandi%20Casalecchio%20di%20Reno" target="_blank" rel="noreferrer">Casalecchio di Reno · Parco Morandi</a></td><td data-label="Tavoli">1</td><td data-label="Piano">Cemento</td><td data-label="Accesso e note"><span class="status free">Gratuito</span> Tavolo da esterno.</td></tr>
+              <tr><td data-label="Luogo"><a class="place-link" href="https://www.openstreetmap.org/search?query=Bowling%20San%20Lazzaro%20di%20Savena" target="_blank" rel="noreferrer">Bowling San Lazzaro di Savena</a></td><td data-label="Tavoli">3</td><td data-label="Piano">MDF</td><td data-label="Accesso e note"><span class="status paid">A pagamento</span> Tavoli da interno.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="societa" class="clubs-grid">
+        <article class="club-card featured">
+          <span class="label">Convenzionati con noi</span>
+          <h3>Gioca in società con il 7% di sconto.</h3>
+          <ul>
+            <li>ASD Fortitudo Tennistavolo <span>Bologna</span></li>
+            <li>Club Spin On <span>Bologna</span></li>
+            <li>ASD Olimpia Zola <span>Zola Predosa</span></li>
+            <li>ASD Nettuno Tennistavolo <span>Funo di Argelato</span></li>
+          </ul>
+        </article>
+        <article class="club-card">
+          <span class="label">Altre società</span>
+          <h3>Altri posti dove allenarsi.</h3>
+          <ul>
+            <li>ASD Major Tennistavolo <span>Bologna e Castel Maggiore</span></li>
+            <li>ASD Zinella <span>San Lazzaro di Savena</span></li>
+            <li>Palamezzolara Cinque Cerchi <span>Mezzolara di Budrio</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="data-note">Le disponibilità e le condizioni possono cambiare. Prima di partire, verifica accesso e orari direttamente con la struttura.</p>
+    </section>
+
     <section id="mappa" class="section map">
       <div class="section-title">
         <p class="eyebrow">Mappa</p>
-        <h2>Due tavoli, un’unica comunità.</h2>
+        <h2>22 luoghi sulla mappa.</h2>
+        <p class="body">Esplora tavoli pubblici, locali privati e località vicine. I marker indicano il luogo o l’area di riferimento, non necessariamente la posizione esatta del tavolo.</p>
       </div>
       <div class="map-card">
-        <div id="map" aria-label="Mappa con due tavoli di ping pong"></div>
+        <div id="map" aria-label="Mappa OpenStreetMap con 22 luoghi dove giocare a ping pong"></div>
         <div class="map-meta">
-          <p>Pin 1: Parco La Montagnola · Pin 2: Tavolo in cemento.</p>
+          <div class="map-legend" aria-label="Legenda della mappa">
+            <span><i class="legend-dot public"></i> Suolo pubblico</span>
+            <span><i class="legend-dot private"></i> Locali privati</span>
+            <span><i class="legend-dot nearby"></i> Dintorni</span>
+          </div>
+          <p class="note">Mancano dalla mappa TEST e Parco Morandi: li aggiungeremo quando avremo un indirizzo o coordinate sufficientemente precise.</p>
           <div class="map-links">
-            <a href="https://www.openstreetmap.org/?mlat=44.502685&amp;mlon=11.346761#map=19/44.502685/11.346761" target="_blank" rel="noreferrer">Apri La Montagnola</a>
-            <a href="https://www.openstreetmap.org/#map=19/44.487941/11.354982" target="_blank" rel="noreferrer">Apri Tavolo in cemento</a>
+            <a href="https://www.openstreetmap.org/#map=12/44.5000/11.3500" target="_blank" rel="noreferrer">Apri Bologna su OpenStreetMap</a>
           </div>
         </div>
       </div>
@@ -110,15 +234,13 @@
     <section id="contatti" class="section contact">
       <div class="section-title">
         <p class="eyebrow">Contatti</p>
-        <h2>Entra nel gruppo WhatsApp e vieni a giocare.</h2>
+        <h2>Scrivici e vieni a giocare.</h2>
       </div>
       <div class="contact-card">
-        <p>Scrivici o unisciti al gruppo per sapere chi c’è oggi.</p>
+        <p>Contattaci per sapere chi c’è oggi e come unirti al gruppo.</p>
         <div class="contact-links">
-          <a class="btn primary" href="https://chat.whatsapp.com/INSERISCI-CODICE" target="_blank" rel="noreferrer">Gruppo WhatsApp</a>
-          <a class="btn ghost" href="mailto:ciao@pingpongdastrada.it">ciao@pingpongdastrada.it</a>
+          <a class="btn primary" href="mailto:ciao@pingpongdastrada.it">ciao@pingpongdastrada.it</a>
         </div>
-        <p class="note">Sostituisci il link WhatsApp con quello reale del gruppo.</p>
       </div>
     </section>
   </main>
@@ -134,14 +256,64 @@
       attribution: "&copy; OpenStreetMap contributors"
     }).addTo(map);
 
-    const montagnola = L.marker([44.502685, 11.346761]).addTo(map);
-    montagnola.bindPopup("Parco La Montagnola");
+    const places = [
+      { name: "Parco della Montagnola", lat: 44.5023317, lng: 11.3465998, category: "public", tables: "3 tavoli", surface: "Resina" },
+      { name: "Lunetta Gamberini", lat: 44.4765257, lng: 11.3737549, category: "public", tables: "2 tavoli", surface: "Cemento" },
+      { name: "Giardino del Ghisello", lat: 44.4908024, lng: 11.2978862, category: "public", tables: "2 tavoli", surface: "Cemento" },
+      { name: "Giardino Decorato al Valore Civile", lat: 44.4995641, lng: 11.3308652, category: "public", tables: "1 tavolo", surface: "Cemento" },
+      { name: "Giardino Parker-Lennon", lat: 44.5037988, lng: 11.3571661, category: "public", tables: "1 tavolo", surface: "Cemento" },
+      { name: "Parco del Velodromo", lat: 44.5000715, lng: 11.3127685, category: "public", tables: "1 tavolo", surface: "Cemento" },
+      { name: "Giardino Lavinia Fontana", lat: 44.4880651, lng: 11.3556821, category: "public", tables: "1 tavolo", surface: "Cemento", note: "Area di gioco soggetta a ristagno d’acqua." },
+      { name: "Parco della Zucca", lat: 44.5133871, lng: 11.3503397, category: "public", tables: "1 tavolo", surface: "Cemento", note: "Rete metallica mancante." },
+      { name: "Giardino Jerzj Popieluszko", lat: 44.5228372, lng: 11.2640048, category: "public", tables: "1 tavolo", surface: "Cemento", note: "Rete metallica mancante." },
+      { name: "Parco di Villa Torchi", lat: 44.5442948, lng: 11.3589, category: "public", tables: "1 tavolo", surface: "Cemento", note: "Rete metallica mancante." },
+      { name: "Giardino Donatori di Sangue", lat: 44.5159469, lng: 11.3405154, category: "public", tables: "1 tavolo", surface: "Cemento", note: "Rete metallica mancante." },
+      { name: "Casa di quartiere Croce Coperta", lat: 44.5348945, lng: 11.352345, category: "public", tables: "1 tavolo", surface: "Cemento", note: "Rete metallica mancante." },
+      { name: "Ping Pong da Strada 2 · Mezz’Aria", lat: 44.4922351, lng: 11.3322094, category: "private", tables: "3–4 tavoli", surface: "Truciolare / alluminio", note: "Uso gratuito previa iscrizione al gruppo." },
+      { name: "DUMBO", lat: 44.505535, lng: 11.32473, category: "private", tables: "2 tavoli", surface: "Resina", note: "Uso gratuito." },
+      { name: "Le Serre dei Giardini Margherita", lat: 44.4831785, lng: 11.3493549, category: "private", tables: "2 tavoli", surface: "Resina", note: "Uso gratuito." },
+      { name: "Làbas", lat: 44.493594, lng: 11.3544348, category: "private", tables: "1 tavolo", surface: "Resina", note: "Uso gratuito." },
+      { name: "Circolo della Pace", lat: 44.4955031, lng: 11.3327894, category: "private", tables: "1 tavolo", surface: "Da verificare", note: "Uso gratuito." },
+      { name: "Fondo Comini", lat: 44.5154348, lng: 11.3423538, category: "private", tables: "1 tavolo", surface: "Da verificare", note: "Uso gratuito; tavolo in cattive condizioni." },
+      { name: "Bar Arno", lat: 44.4741838, lng: 11.3880857, category: "private", tables: "1 tavolo", surface: "MDF", note: "Tavolo interno a pagamento." },
+      { name: "Parco Falcone e Borsellino · Villanova", lat: 44.4968733, lng: 11.4304534, category: "nearby", tables: "1 tavolo", surface: "Resina", note: "Uso gratuito." },
+      { name: "Via Cavour · Casalecchio di Reno", lat: 44.4792994, lng: 11.2760464, category: "nearby", tables: "1 tavolo", surface: "Cemento", note: "Uso gratuito." },
+      { name: "Bowling San Lazzaro", lat: 44.4740884, lng: 11.4134864, category: "nearby", tables: "3 tavoli", surface: "MDF", note: "Tavoli interni a pagamento." }
+    ];
 
-    const cemento = L.marker([44.487941, 11.354982]).addTo(map);
-    cemento.bindPopup("Tavolo in cemento");
+    const categoryLabels = {
+      public: "Suolo pubblico",
+      private: "Locale privato",
+      nearby: "Dintorni"
+    };
+    const categoryColors = {
+      public: "#2a6f62",
+      private: "#ff5341",
+      nearby: "#f5c542"
+    };
 
-    const group = L.featureGroup([montagnola, cemento]);
-    map.fitBounds(group.getBounds().pad(0.2));
+    const markers = places.map((place) => {
+      const marker = L.circleMarker([place.lat, place.lng], {
+        radius: 8,
+        color: "#121212",
+        weight: 2,
+        fillColor: categoryColors[place.category],
+        fillOpacity: 0.95
+      }).addTo(map);
+      const osmUrl = `https://www.openstreetmap.org/?mlat=${place.lat}&mlon=${place.lng}#map=17/${place.lat}/${place.lng}`;
+      marker.bindPopup(`
+        <div class="map-popup">
+          <span>${categoryLabels[place.category]}</span>
+          <strong>${place.name}</strong>
+          <p>${place.tables} · ${place.surface}</p>
+          ${place.note ? `<p>${place.note}</p>` : ""}
+          <a href="${osmUrl}" target="_blank" rel="noreferrer">Apri su OpenStreetMap ↗</a>
+        </div>
+      `);
+      return marker;
+    });
+
+    map.fitBounds(L.featureGroup(markers).getBounds().pad(0.08));
   </script>
 </body>
 </html>

@@ -23,6 +23,10 @@ body {
   line-height: 1.6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .grain {
   position: fixed;
   inset: 0;
@@ -44,9 +48,17 @@ body {
 }
 
 .brand {
-  font-family: "Climate Crisis", sans-serif;
-  font-size: 1.2rem;
-  letter-spacing: 0.04em;
+  display: block;
+  flex: 0 1 320px;
+  line-height: 0;
+  max-width: 320px;
+}
+
+.brand img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
 }
 
 .nav-links {
@@ -62,7 +74,14 @@ body {
   font-size: 0.9rem;
 }
 
-.nav-cta {
+.nav-links a:hover,
+.nav-links a:focus-visible,
+.place-link:hover,
+.place-link:focus-visible {
+  color: var(--red);
+}
+
+.nav .nav-cta {
   background: var(--ink);
   color: var(--paper);
   padding: 10px 18px;
@@ -129,6 +148,8 @@ body {
 }
 
 .btn.small {
+  background: var(--green);
+  color: #fff;
   padding: 10px 16px;
   font-size: 0.9rem;
 }
@@ -162,9 +183,266 @@ body {
   margin-bottom: 14px;
 }
 
+.section-title {
+  margin-bottom: 28px;
+}
+
+.section-title-row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+}
+
 .body {
   max-width: 720px;
   font-size: 1rem;
+}
+
+.directory-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(105px, 1fr));
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.directory-stats div {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(18, 18, 18, 0.08);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.directory-stats strong,
+.directory-stats span {
+  display: block;
+}
+
+.directory-stats strong {
+  font-family: "Climate Crisis", sans-serif;
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.directory-stats span {
+  font-size: 0.75rem;
+  line-height: 1.3;
+  margin-top: 6px;
+}
+
+.category-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.category-nav a {
+  color: var(--ink);
+  background: rgba(42, 111, 98, 0.12);
+  border: 1px solid rgba(42, 111, 98, 0.12);
+  border-radius: 999px;
+  padding: 9px 15px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.category-nav a:hover,
+.category-nav a:focus-visible {
+  background: var(--green);
+  color: #fff;
+}
+
+.directory-block {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(18, 18, 18, 0.08);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 36px var(--shadow);
+  margin-bottom: 28px;
+  overflow: hidden;
+  scroll-margin-top: 24px;
+}
+
+.directory-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 26px 20px;
+}
+
+.directory-heading h3,
+.club-card h3 {
+  font-size: 1.28rem;
+  line-height: 1.25;
+}
+
+.count-pill {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 999px;
+  flex: 0 0 auto;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 8px 13px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  border-top: 1px solid rgba(18, 18, 18, 0.09);
+  padding: 15px 18px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: rgba(42, 111, 98, 0.08);
+  color: rgba(18, 18, 18, 0.62);
+  font-size: 0.69rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 26px;
+  width: 30%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  text-align: center;
+  width: 80px;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 140px;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 26px;
+}
+
+tbody tr:hover {
+  background: rgba(245, 197, 66, 0.1);
+}
+
+.needs-care {
+  background: rgba(255, 83, 65, 0.035);
+}
+
+.place-link {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration-color: rgba(18, 18, 18, 0.22);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.place-link::after {
+  content: " ↗";
+  color: var(--green);
+  font-size: 0.8em;
+}
+
+.status {
+  display: inline-block;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  margin: 0 5px 4px 0;
+  padding: 3px 8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.status.free {
+  background: rgba(42, 111, 98, 0.14);
+  color: #185247;
+}
+
+.status.paid {
+  background: rgba(18, 18, 18, 0.1);
+}
+
+.status.danger {
+  background: rgba(255, 83, 65, 0.16);
+  color: #a32619;
+}
+
+.status.warning {
+  background: rgba(245, 197, 66, 0.28);
+  color: #745600;
+}
+
+.clubs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  scroll-margin-top: 24px;
+}
+
+.club-card {
+  background: #fff;
+  border: 1px solid rgba(18, 18, 18, 0.08);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: 0 18px 36px var(--shadow);
+}
+
+.club-card.featured {
+  background: var(--green);
+  color: #fff;
+}
+
+.club-card.featured .label {
+  color: #a8e3d7;
+}
+
+.club-card ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.club-card li {
+  border-top: 1px solid rgba(18, 18, 18, 0.1);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.club-card.featured li {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.club-card li span {
+  font-size: 0.78rem;
+  font-weight: 500;
+  opacity: 0.72;
+  text-align: right;
+}
+
+.data-note {
+  color: rgba(18, 18, 18, 0.62);
+  font-size: 0.82rem;
+  margin-top: 18px;
 }
 
 .tournament-card {
@@ -195,13 +473,78 @@ body {
 
 #map {
   width: 100%;
-  height: 380px;
+  height: 520px;
 }
 
 .map-meta {
   padding: 20px 24px 26px;
   display: grid;
   gap: 12px;
+}
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+}
+
+.map-legend span {
+  align-items: center;
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 700;
+  gap: 7px;
+}
+
+.legend-dot {
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+}
+
+.legend-dot.public {
+  background: var(--green);
+}
+
+.legend-dot.private {
+  background: var(--red);
+}
+
+.legend-dot.nearby {
+  background: var(--sun);
+}
+
+.map-popup {
+  display: grid;
+  gap: 5px;
+  line-height: 1.35;
+  min-width: 190px;
+}
+
+.map-popup span {
+  color: var(--green);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.map-popup strong {
+  font-size: 0.95rem;
+}
+
+.map-popup p {
+  font-size: 0.78rem;
+  margin: 0;
+}
+
+.map-popup a {
+  color: var(--green);
+  font-size: 0.76rem;
+  font-weight: 800;
+  margin-top: 3px;
 }
 
 .map-links {
@@ -249,6 +592,8 @@ body {
 .hero-card,
 .section-title,
 .tournament-card,
+.directory-block,
+.clubs-grid,
 .map-card,
 .contact-card {
   animation: rise 0.9s ease forwards;
@@ -260,6 +605,8 @@ body {
 .hero-card { animation-delay: 0.2s; }
 .section-title { animation-delay: 0.1s; }
 .tournament-card { animation-delay: 0.15s; }
+.directory-block { animation-delay: 0.15s; }
+.clubs-grid { animation-delay: 0.2s; }
 .map-card { animation-delay: 0.2s; }
 .contact-card { animation-delay: 0.2s; }
 
@@ -278,6 +625,15 @@ body {
   .hero-grid {
     margin-top: 40px;
   }
+
+  .section-title-row {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .directory-stats {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -286,11 +642,136 @@ body {
     align-items: flex-start;
   }
 
+  .brand {
+    flex-basis: auto;
+    max-width: 285px;
+  }
+
   .hero {
     padding: 24px 6vw 60px;
   }
 
   .section {
     padding: 56px 6vw;
+  }
+
+  .directory-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .directory-stats div {
+    align-items: baseline;
+    display: flex;
+    gap: 10px;
+  }
+
+  .directory-stats span {
+    margin-top: 0;
+  }
+
+  .category-nav {
+    flex-wrap: nowrap;
+    margin-right: -6vw;
+    overflow-x: auto;
+    padding-right: 6vw;
+  }
+
+  .category-nav a {
+    flex: 0 0 auto;
+  }
+
+  .directory-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 22px 20px 16px;
+  }
+
+  .count-pill {
+    font-size: 0.72rem;
+  }
+
+  .table-wrap {
+    overflow: visible;
+  }
+
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  tbody tr {
+    border-top: 1px solid rgba(18, 18, 18, 0.1);
+    padding: 15px 20px;
+  }
+
+  td,
+  td:first-child,
+  td:nth-child(2),
+  td:nth-child(3),
+  td:last-child {
+    border: 0;
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 10px;
+    padding: 4px 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  td::before {
+    content: attr(data-label);
+    color: rgba(18, 18, 18, 0.55);
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding-top: 3px;
+    text-transform: uppercase;
+  }
+
+  .clubs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .club-card li {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .club-card li span {
+    text-align: left;
+  }
+
+  #map {
+    height: 420px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
 }
