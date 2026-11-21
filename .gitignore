@@ -1,0 +1,17 @@
+node_modules/
+.next/
+out/
+coverage/
+playwright-report/
+test-results/
+artifacts/
+*.tsbuildinfo
+.env
+.env.local
+.env.*.local
+!.env.example
+data/*.db
+data/*.db-*
+private-imports/
+archivio_completo_chat_e_vocali.csv
+.DS_Store

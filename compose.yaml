@@ -1,0 +1,16 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      AUTH_SECRET: ${AUTH_SECRET:?Imposta AUTH_SECRET nel file .env}
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
+      DATABASE_PATH: /data/pingpong.db
+      TZ: Europe/Rome
+    volumes:
+      - pingpong_data:/data
+    restart: unless-stopped
+
+volumes:
+  pingpong_data:

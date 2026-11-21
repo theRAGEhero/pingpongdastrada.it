@@ -1,0 +1,15 @@
+node_modules
+.next
+.git
+.gitignore
+data
+private-imports
+archivio_completo_chat_e_vocali.csv
+playwright-report
+test-results
+artifacts
+coverage
+.env
+.env.*
+!.env.example
+README.md
